@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/vuejs-2.5.16.js"></script>
+
+</head>
+<body>
+<div id="mainBody">
+    <div class="outDiv">
+        <div class="bigDiv">
+            <div class="title"><span>组合码:</span></div>
+            <input class="inp" id="comCode" v-model="query.comCode"/>
+        </div>
+        <div class="bigDiv">
+            <div class="title"><span>交易:</span></div>
+            <input class="inp" id="traDing" v-model="query.traDing"/>
+        </div>
+
+    </div>
+    <button class="btn" @click="submit()">提交</button>
+    <div class="backDiv" id="backDiv">
+        <div class="bigDiv">
+            报文头:<span>{{returnData.logId}}</span><br>
+        </div>
+        <div class="bigDiv">
+            时间:<span>{{returnData.reqSysTime}}</span>
+        </div>
+        <div class="bigDiv">
+            序号:<span>{{returnData.respSeqNo}}</span><br>
+        </div>
+        <div class="bigDiv">
+            返回信息：<span>{{returnData.returnFind}}</span><br>
+        </div>
+        <div class="bigDiv">
+            返回码:<span>{{returnData.respCode}}</span><br>
+        </div>
+        <div class="bigDiv">
+            附言1:<span>{{returnData.sc1}}</span><br>
+        </div>
+        <div class="bigDiv">
+            附言2:<span>{{returnData.sc2}}</span><br>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="js/index.js"></script>
+</html>
