@@ -19,6 +19,12 @@ import java.util.Map;
 @Mapper
 public interface PageSqlDao {
 
-    public List<Map<String, Object>> selectPublicItemList(@Param(value="sqlStr") String sqlStr);
+    List<Map<String, Object>> selectPublicItemList(@Param(value="sqlStr") String sqlStr);
+
+    Integer insertPublicItemList(@Param(value="sqlStr") String sqlStr);
+
+    Integer deletePublicItemList(@Param(value="sqlStr") String sqlStr);
+
+    Integer updatePublicItemList(@Param(value="sqlStr") String sqlStr);
 
 }

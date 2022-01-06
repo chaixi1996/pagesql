@@ -1,5 +1,7 @@
 package cn.abc.pagesql.service;
 
+import cn.abc.pagesql.utils.Result;
+
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +17,7 @@ import java.util.Map;
  */
 public interface PageSqlService {
 
-    List<Map<String, Object>> selectPublicItemList(String sql);
+    Result ItemList(String sql);
 
 
 }
